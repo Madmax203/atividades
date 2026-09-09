@@ -1,0 +1,32 @@
+body{
+    background-image: url(imagens/mdvmefeejg331.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+.titulo{
+    text-align: center;    
+    background: linear-gradient(90deg, rgba(247, 0, 243, 1) 0%,  rgb(4, 0, 255) 100%);
+    border: 1px solid rgb(255, 0, 242);
+}
+
+.grade{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-top: 100px;
+}
+
+.eyes{
+    width: 80%;
+    border: 1px solid rgb(255, 0, 212);
+    
+}
+
+.imagens{
+    text-align: center;
+}
+
+img{
+    border-radius: 2%;
+}

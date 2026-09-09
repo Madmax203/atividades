@@ -1,0 +1,15 @@
+.header{
+    text-align: center;
+    background: linear-gradient(to right, red, rgb(255, 145, 0));
+}
+
+.menu-icons{
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.container{
+    background: linear-gradient(to right, red, rgb(255, 145, 0));
+}

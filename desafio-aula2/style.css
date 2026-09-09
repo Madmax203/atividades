@@ -1,0 +1,40 @@
+body{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto; 
+    background-color: antiquewhite;
+    font-family:Arial;
+}
+
+.formgroup{
+    display: grid;
+    border-radius: 15px;  
+    padding: 30px; 
+         
+}
+
+.titulo{
+    color: blue;
+}
+
+#nome{
+    margin-bottom: 30px;
+}
+#email{
+    margin-bottom: 40px;
+}
+
+#titulo {
+    color: rgb(212, 0, 255);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 32px;
+}
+
+.destaque {
+    color: red;
+    background-color: lightyellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    padding: 10px;
+}

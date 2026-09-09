@@ -1,0 +1,124 @@
+body{
+    background-color: bisque;
+}
+.corpo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.divisa{
+    border: 1px solid rgb(186, 180, 180);
+    border-radius: 20px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    
+}
+.titulo{
+    text-align: center;
+}
+.caixa{
+    height: 150px;
+    width: 300px;
+    background: linear-gradient(to right, rgb(0, 17, 255), rgb(1, 255, 1));
+    border: 1px solid black;
+}
+
+.botao_sol{
+    background: linear-gradient(to right, red, rgb(255, 145, 0));
+    color: white;
+    border-radius: 20px;
+    height: 150px;
+    width: 300px;
+}
+
+.titulo_estilizado{
+    color: blue;
+    text-shadow: 2px 2px 4px grey;
+}
+
+.sol{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(yellow, orange, red);
+
+}
+.titulo_banner{
+    color: rgb(132, 0, 255);
+    text-shadow: 2px 2px 4px purple;
+}
+
+.banner{
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 200px;
+    width: 800px;
+    background: linear-gradient(to right, blue, purple);
+}
+
+.botao_neon{
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    text-shadow: 0px 0px 10px cyan;
+    border: 3px solid cyan;
+    box-shadow: 1px 1px 10px cyan;
+}
+
+.cartao_moderno{
+    background: linear-gradient(90deg, rgb(0, 255, 242), rgb(248, 3, 236));
+    border-radius: 20px;
+    width: 350px;
+    height: 450px;
+    padding: 10px;
+    border: 1px solid rgb(4, 0, 255);
+
+}
+.topo{
+    display: flex;
+    text-align: center;
+    gap: 20px;
+}
+
+.cartao_moderno p{
+    color: rgb(0, 38, 255);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.cartao_moderno h1{
+    color: rgb(0, 38, 255);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.cartao_moderno img{
+    width: 100px;
+}
+
+.planeta{
+    width: 300px;
+    height: 290px;
+    background: radial-gradient(rgb(168, 166, 166), #847669, #4D3F38);
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.nextpage{
+    text-decoration: none;
+    background: linear-gradient(to right, red, rgb(255, 145, 0));
+    color: white;
+    
+}
+
+.nextpagebutton{
+    background: linear-gradient(to right, red, rgb(255, 145, 0));
+    border-radius: 10px;
+    padding: 10px;
+}
+
