@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valor = Number(prompt("Digite o valor da compra"))
+
+        if (valor > 500){
+            desconto = valor * 0.20
+            alert("com um desconto de 20% o total a pagar é " + (valor - desconto))
+        }
+        else if (valor > 200 && valor <= 500){
+            desconto = valor * 0.10 
+            alert("com um desconto de 10% o total a pagar é " + (valor - desconto))
+        }
+        
+    </script>
+</body>
+</html>
