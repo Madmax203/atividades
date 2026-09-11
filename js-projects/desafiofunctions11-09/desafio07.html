@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Maior (number1, number2){
+            if (number1 > number2){
+                return number1
+            }
+            else{
+                return number2
+            }
+        }
+        while (true){
+            let numero1 = Number(prompt("Digite o primeiro numero: "))
+            let numero2 = Number(prompt("Digite o segundo numero: "))
+            let resultado = Maior(numero1, numero2)
+            alert("O maior Numero é " + resultado)
+        }
+    </script>
+</body>
+</html>

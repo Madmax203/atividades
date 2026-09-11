@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Aprovacao (numero){
+            if (numero >= 7){
+                return alert("Aprovado")
+            }
+            else if (numero >= 5){
+                return alert("Recuperação")
+            }
+            else{
+                return alert("Reprovado")
+            }
+        }
+        while (true){
+            let nota = Number(prompt("Digite uma nota"))
+            alert(Aprovacao(nota))
+        }
+    </script>
+</body>
+</html>
