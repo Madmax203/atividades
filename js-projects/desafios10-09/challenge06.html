@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valor = Number(prompt("Digite o valor do produto (0 para finalizar)"))
+        let total = 0;
+        let quantidade = 0;
+        while (valor != 0){
+            quantidade ++;
+            total = total + valor
+            alert("valor adicionado")
+            valor = Number(prompt("Digite o valor do produto(0 para finalizar)"))
+        }
+        alert("valor total: "+ total + "\nquantidade de produtos: "+ quantidade)
+    </script>
+</body>
+</html>
