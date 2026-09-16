@@ -6,6 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        function contarAprovados(notas) {
+            let aprovados = 0;
+
+            for (let i = 0; i < notas.length; i++) {
+                if (notas[i] >= 7) {
+                    aprovados++;
+                }
+            }
+
+            return aprovados;
+        }
+        let notas = [6.5, 8.0, 5.0, 7.0, 9.5];
+
+        let resultado = contarAprovados(notas);
+
+        alert("Quantidade de aprovados: " + resultado);
+    </script>
 </body>
 </html>
