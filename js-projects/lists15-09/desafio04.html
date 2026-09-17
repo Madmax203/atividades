@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let produto = {
+            nome: "Snickers",
+            preco: 6.00,
+            emEstoque: false
+
+        }
+        function realizarCompra(item) {
+            if (item.emEstoque == true)
+            return alert("Compra de " + item.nome + " realizada com sucesso por R$ " + item.preco);
+
+            else{
+                return alert("Desculpe " + item.nome + " está fora de estoque");
+            }
+        }
+
+        realizarCompra(produto)
+    </script>
+</body>
+</html>
