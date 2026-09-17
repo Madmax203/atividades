@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo"> JavaScript </h1> 
+    <button id="btnCor"> Trocar Cor</button> 
+
+
+    <script>
+        let titulo = document.getElementById("titulo")
+        let btncor = document.getElementById("btnCor")
+
+        btncor.addEventListener("click", function(){
+            titulo.style.color = "green";
+            titulo.style.fontSize = "90px";
+        })
+    </script>
+
+</body>
+</html>
