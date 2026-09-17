@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="produto">Notebook</p>
+    <p class="produto">Mouse</p>
+    <p class="produto">Teclado</p>
+    <button id="btnMostrar">
+    Mostrar Produtos
+
+    <script>
+        let produtos = document.getElementsByClassName ("produto");
+        let botao = document.getElementById("btnMostrar");
+        let lista = []
+        botao.addEventListener("click", function(){
+            for (let i = 0; i < produtos.length; i++){
+                alert(produtos[i].textContent)
+            }
+        })
+    </script>
+</button>
+</body>
+</html>
