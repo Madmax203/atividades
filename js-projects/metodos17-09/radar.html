@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="mensagem"> 
+    <p id="status"></p> 
+
+    <script>
+        let entrada = document.getElementById("mensagem")
+        let mensagem = document.getElementById("status")
+
+        entrada.addEventListener("input", function(){
+            if(entrada.value.length < 10){
+                mensagem.textContent = "Mensagem curta"
+            }
+            else if(entrada.value.length >= 10 && entrada.value.length <= 20){
+                mensagem.textContent = "Mensagem média"
+            }
+            else{
+                mensagem.textContent = "Mensagem longa"
+            }
+        })
+    </script>
+</body>
+</html>
