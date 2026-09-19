@@ -1,14 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Academia dos Heróis</title>
 </head>
+
 <body>
-    testando o que eu digitei apenas ná PortalDoHeroi, Todas as outras tem que estar completas
+
+    <h1>Academia dos Heróis</h1>
+
+    <h2>Cadastro de Aventureiro</h2>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome">
+
+    <br><br>
+
+    <label for="classe">Classe:</label>
+    <input type="text" id="classe">
+
+    <br><br>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha">
+
+    <br><br>
+
+    <p id="mensagem"></p>
+
+    <br><br>
+
+    <button id="btnCriar">
+        Criar ficha
+    </button>
+
+
+    <hr>
+
+
+    <h2>Ficha do Personagem</h2>
+
+    <p>
+        Nome:
+        <span id="nomeFicha">---</span>
+    </p>
+
+    <p>
+        Classe:
+        <span id="classeFicha">---</span>
+    </p>
+
+    <p>
+        Senha:
+        <span id="senhaFicha">---</span>
+    </p>
+
+
+    <button id="btnLimpar">Limpar ficha</button>
+
+
+    <hr>
+
+
+
     <script>
 
+        //cadastro de aventureiro//
+
+        let name = document.getElementById("nome")
+
+        let classe = document.getElementById("classe")
+
+        let password = document.getElementById("senha")
+
+        let button = document.getElementById("btnCriar")
+
+        //ficha do personagem//
+
+        let nomeFicha = document.getElementById("nomeFicha")
+        let classeFicha = document.getElementById("classeFicha")
+        let senhaFicha = document.getElementById("senhaFicha")
+        let buttonFicha = document.getElementById("btnLimpar")
+
+
+        button.addEventListener("click", function(){
+            nomeFicha.textContent = nome.value;
+            classeFicha.textContent = classe.value;
+            senhaFicha.textContent = password.value;
+            
+
+        })
+
+        buttonFicha.addEventListener("click", function(){
+            nomeFicha.textContent = "---"
+            classeFicha.textContent = "---"
+            senhaFicha.textContent = "---"
+        })
     </script>
+
 </body>
+
 </html>
