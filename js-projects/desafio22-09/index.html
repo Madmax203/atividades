@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="centralizar">
+        
+        <div id="divCentro">
+            <div id="logo">
+                <h1>login</h1>
+            </div>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+        
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <p id="mensagemUser"></p>
+            <p id="mensagemSenha"></p>
+            <button id="botao">LOGIN</button>
+        </div>
+        
+    </div>
+    
+
+    <script>
+        let username = document.getElementById("username")
+        let password = document.getElementById("password")
+        let mensagemSenha = document.getElementById("mensagemSenha")
+        let mensagemUser = document.getElementById("mensagemUser")
+        let botao = document.getElementById("botao")
+       
+        let invalidCharacters = /[^a-zA-Z]/g; 
+
+        let resultado = username.value.match(invalidCharacters)
+        
+
+        
+        // mensagem do username //
+        
+        botao.addEventListener("click", function(){
+            mensagemUser.innerHTML = "caracteres invalidos: " + resultado;
+        })
+
+        
+        // mensagem do password //
+
+        botao.addEventListener("click", function(){
+            if (password.value.length < 8) {
+                mensagemSenha.textContent = "senha precisa ter no minimo 8 caracteres"
+                mensagemSenha.style.color = 'orange'
+            }
+
+            else{
+                mensagemSenha.textContent = ""
+            }
+        })
+
+        
+    </script>
+</body>
+</html>
