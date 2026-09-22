@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Prática - Eventos JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Prática de Eventos JavaScript</h1>
+
+    <!-- ============================== -->
+    <!-- 1. CLICK                       -->
+    <!-- ============================== -->
+
+    <section>
+
+        <h2>1. Click</h2>
+
+        <p id="message01">Contador: <span id="messageNumber">0</span> </p>
+
+        <button id="btnSum">+</button>
+
+        <button id="btnClear">zerar</button>
+
+        <button id="btnSubtract">-</button>
+
+        
+
+    </section>
+
+
+    <!-- ============================== -->
+    <!-- 2. MOUSEOVER / MOUSEOUT        -->
+    <!-- ============================== -->
+
+    <section>
+
+        <h2>2. Mouseover / Mouseout</h2>
+
+        <div id="areaMouse">
+            <p>Coloque o mouse na caixa</p>
+        </div>
+
+        <p id="resultadoMouse"></p>
+
+    </section>
+
+
+    <!-- ============================== -->
+    <!-- 3. KEYDOWN                     -->
+    <!-- ============================== -->
+
+    <section>
+
+        <h2>3. Keydown</h2>
+
+        <p>Digite alguma coisa:</p>
+
+        <input type="text" id="campoTeclado">
+
+        <p id="resultadoTeclado"></p>
+
+    </section>
+
+
+    <!-- ============================== -->
+    <!-- 4. CHANGE                      -->
+    <!-- ============================== -->
+
+    <section>
+
+        <h2>4. Change</h2>
+
+        <p>Escolha uma opção:</p>
+
+        <select id="selecao">
+
+            <option value="">Escolha...</option>
+            <option value="Vermelho">Vermelho</option>
+            <option value="Azul">Azul</option>
+            <option value="Verde">Verde</option>
+
+        </select>
+
+        <p id="resultadoChange"></p>
+
+    </section>
+
+
+    <!-- ============================== -->
+    <!-- 5. LOAD                        -->
+    <!-- ============================== -->
+
+    <section>
+
+        <h2>5. Load</h2>
+
+        <p id="resultadoLoad">
+            A página ainda não foi carregada...
+        </p>
+
+    </section>
+
+
+    <!-- ============================== -->
+    <!-- DESAFIO FINAL                  -->
+    <!-- ============================== -->
+
+    <section>
+
+        <h2>6. Desafio Final</h2>
+
+        <p>
+            Use os eventos que você aprendeu para criar
+            alguma interação nesta seção.
+        </p>
+
+        <button id="btnDesafio">
+            Botão do desafio
+        </button>
+
+        <input
+            type="text"
+            id="inputDesafio"
+            placeholder="Digite alguma coisa"
+        >
+
+        <p id="resultadoDesafio"></p>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
