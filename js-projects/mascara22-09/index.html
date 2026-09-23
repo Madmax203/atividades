@@ -31,7 +31,7 @@
     <br>
 
     <h2>6. SENHA</h2>
-    <input type="text" id="senha" minlength="8">
+    <input type="password" id="senha" minlength="8">
     <p id="mensagemSenha"></p>
 
 
@@ -120,6 +120,7 @@
             let valor = senha.value.length
 
             mensagemSenha.innerHTML = "você digitou: " + valor + " Caracteres";
+            mensagemSenha.style.color = "red"
         })
     </script>
 </body>
