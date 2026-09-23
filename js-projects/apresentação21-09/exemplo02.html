@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="hoverButton">Hover over me!</button>
+
+    <script>
+        // 1. Select the element from the DOM
+        const button = document.getElementById("hoverButton");
+
+        // 2. Add the "mouseover" listener (replaces onmouseover)
+        button.addEventListener("mouseover", () => {
+        button.style.backgroundColor = "lightblue";
+        button.style.color = "black";
+        });
+
+        // 3. Add a "mouseout" listener to revert the style when the mouse leaves
+        button.addEventListener("mouseout", () => {
+        button.style.backgroundColor = "";
+        button.style.color = "";
+        });
+    </script>
+</body>
+</html>

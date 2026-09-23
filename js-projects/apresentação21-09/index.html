@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>você clickou <span id="contagem">0</span> vezes</p>
+    <button id="btnclick">clique aqui </button>
+
+
+    <br><hr><br>
+
+
+    <div id="area">
+        <p id="texto">coloque o mouse aqui</p>
+    </div>
+
+    <script>
+        //////////caso 1///////////
+        let btnclick = document.getElementById("btnclick")
+        let contador = document.getElementById("contagem")
+        let counter = 0
+
+        btnclick.addEventListener("click", function(){
+            counter++;
+            contador.textContent = counter
+        })
+
+
+        /////////caso 2//////////
+
+        let area = document.getElementById("area")
+        let texto = document.getElementById("texto")
+
+        area.addEventListener("mouseover", function(){
+            area.style.backgroundColor = 'azure'
+            texto.style.fontWeight = ''
+            
+        })
+        area.onmouseout = function(){
+            area.style.backgroundColor = ''
+            texto.style.fontWeight = 'bold'
+        }
+    </script>
+</body>
+</html>

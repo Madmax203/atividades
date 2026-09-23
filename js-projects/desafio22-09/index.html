@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="centralizar">
-        
         <div id="divCentro">
             <div id="logo">
                 <h1>login</h1>
@@ -26,9 +25,7 @@
             <p id="mensagemSenha"></p>
             <button id="botao">LOGIN</button>
         </div>
-        
     </div>
-    
 
     <script>
         let username = document.getElementById("username")
@@ -37,33 +34,26 @@
         let mensagemUser = document.getElementById("mensagemUser")
         let botao = document.getElementById("botao")
        
-        let invalidCharacters = /[^a-zA-Z]/g; 
+        let invalidCharacters = /[^a-zA-Z0-9]/g; 
 
-        let resultado = username.value.match(invalidCharacters)
-        
-
-        
-        // mensagem do username //
         
         botao.addEventListener("click", function(){
-            mensagemUser.innerHTML = "caracteres invalidos: " + resultado;
-        })
-
-        
-        // mensagem do password //
-
-        botao.addEventListener("click", function(){
+            // 1. Validação do Username (captura o valor atual no momento do clique)
+            let resultado = username.value.match(invalidCharacters);
+            if (resultado) {
+                mensagemUser.innerHTML = "caracteres invalidos: " + resultado.join(", ");
+                mensagemUser.style.color = 'orange';
+            } else {
+                mensagemUser.innerHTML = ""; // Limpa a mensagem se estiver tudo certo
+            }
+            // 2. Validação do Password
             if (password.value.length < 8) {
-                mensagemSenha.textContent = "senha precisa ter no minimo 8 caracteres"
-                mensagemSenha.style.color = 'orange'
-            }
-
-            else{
-                mensagemSenha.textContent = ""
+                mensagemSenha.textContent = "senha precisa ter no minimo 8 caracteres";
+                mensagemSenha.style.color = 'orange';
+            } else {
+                mensagemSenha.textContent = "";
             }
         })
-
-        
     </script>
 </body>
 </html>

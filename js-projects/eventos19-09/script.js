@@ -56,3 +56,22 @@ entrada.addEventListener("keydown", function(event){
 // Section 4 change //
 
 let selecao = document.querySelector("#selecao")
+
+let resultadoChange = document.getElementById("resultadoChange")
+
+
+selecao.addEventListener("change", function(){
+    if(selecao.value === "Vermelho"){
+        resultadoChange.innerHTML = "você escolheu vermelho"
+    }
+    else if (selecao.value === "Azul"){
+        resultadoChange.innerHTML = "você escolheu azul"
+    }
+
+    else if (selecao.value === "Verde"){
+        resultadoChange.innerHTML = "você escolheu verde"
+    }
+    else{
+        resultadoChange.innerHTML = ""
+    }
+})  
