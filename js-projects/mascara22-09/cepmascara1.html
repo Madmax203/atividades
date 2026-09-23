@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="cep" placeholder="Digite seu CEP" maxlength="9">
+    <script>
+        //Mascarar CEP
+// 1. Pegamos o elemento correto do input pelo ID 'cep'
+const inputCep = document.getElementById('cep');
+
+// 2. Adicionamos o ouvinte no elemento CORRETO (inputCep)
+inputCep.addEventListener('input', (e) => {
+    let valor = e.target.value;
+
+    // Remove tudo o que não for dígito (números)
+    valor = valor.replace(/\D/g, "");
+
+    // Limita o tamanho máximo para 8 dígitos
+    valor = valor.substring(0, 8);
+
+    // Aplica a máscara do CEP usando expressões regulares (Regex)
+    // 00000-000
+    valor = valor.replace(/(\d{5})(\d)/, "$1-$2");
+
+    // Devolve o valor formatado de volta para o input
+    e.target.value = valor;
+});
+    </script>
+</body>
+</html>

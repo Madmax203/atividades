@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fone" placeholder="Digite seu telefone" maxlength="14">
+
+    <!-- Chamando nosso script -->
+     <script>
+//Função mascarar telefone
+// 1. Pegamos o elemento correto do input pelo ID 'fone'
+const inputTelefone = document.getElementById('fone');
+
+// 2. Adicionamos o ouvinte no elemento CORRETO (inputTelefone)
+inputTelefone.addEventListener('input', (e) => {
+    let valor = e.target.value;
+
+    // Remove tudo o que não for dígito (números)
+    valor = valor.replace(/\D/g, "");
+
+    // Limita o tamanho máximo para 11 dígitos (DDD + 9 dígitos do celular)
+    valor = valor.substring(0, 11);
+
+    // Aplica a máscara do telefone usando expressões regulares (Regex) passo a passo:
+    
+    // Passo A: Coloca os parênteses em volta dos 2 primeiros dígitos (o DDD) -> (00
+    valor = valor.replace(/^(\d{2})(\d)/g, "($1) $2");
+
+    // Passo B: Coloca o hífen antes dos últimos 4 dígitos -> 00000-0000
+    valor = valor.replace(/(\d{5})(\d{4})$/, "$1-$2");
+
+    // Devolve o valor formatado de volta para o input
+    e.target.value = valor;
+});
+
+     </script>
+   
+</body>
+</html>
