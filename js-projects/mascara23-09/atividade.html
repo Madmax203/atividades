@@ -9,11 +9,7 @@
 <body>
     <h2>1. nome</h2> 
     <input type="text" id="nome">
-    <ul>
-        <li>Possui pelo menos 3 caracteres</li>
-        <li>Não contém números</li>
-        <li></li>
-    </ul>
+    
 
     <br>
 
@@ -65,6 +61,20 @@
             valor = valor.replace(/\d/g, '')
             event.target.value = valor
         })
+
+        // 2. NOVO CÓDIGO (Roda apenas quando o usuário sai do campo)
+        const regexNomeSobrenome = /^[A-Za-zÀ-ÖØ-öø-ÿ']{2,}(?:\s+[A-Za-zÀ-ÖØ-öø-ÿ']{2,})+$/;
+
+        nome.addEventListener("blur", function(event) {
+            let valor = event.target.value.trim(); // Limpa espaços extras antes e depois
+
+            if (valor === "") return; // Se estiver vazio, não faz nada (deixa para o atributo 'required' do HTML)
+
+            if (!regexNomeSobrenome.test(valor)) {
+                alert("Por favor, digite seu nome e pelo menos um sobrenome.");
+                // Opcional: nome.focus(); // Devolve o cursor para o campo se estiver errado
+            }
+        });
 
 
         //sessão2 CPF//
