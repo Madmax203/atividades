@@ -1,0 +1,12 @@
+.requirements{
+    list-style: none;
+    padding-left: 0;
+}
+
+.requirements li{
+    color: red;
+}
+
+.requirements li.valido{
+    color: greenyellow;
+}

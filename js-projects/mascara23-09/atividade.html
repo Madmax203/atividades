@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>1. nome</h2> 
+    <input type="text" id="nome">
+    <ul>
+        <li>Possui pelo menos 3 caracteres</li>
+        <li>Não contém números</li>
+        <li></li>
+    </ul>
+
+    <br>
+
+    <h2>2. CPF</h2>
+    <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
+
+    <br>
+
+    <h2>3. RG</h2>
+    <input type="text" id="rg" placeholder="000.000.000" maxlength="11">
+
+    <br>
+
+    <h2>4. CEP</h2>
+    <input type="text" id="cep" placeholder="00000-000" >
+
+    <br>
+
+    <h2>5. ENDEREÇO</h2>
+    <input type="text">
+
+    <h2>6. UF</h2>
+    <input type="text" id="uf" placeholder="ex: RN">
+
+    <br>
+    <div class="campo">
+        <h2>7. SENHA</h2>
+        <input type="password" id="senha" minlength="8">
+        <p id="mensagemSenha"></p>
+
+        <ul class="requirements">
+            <li id="reqLength">Mínimo de 8 caracteres</li>
+            <li id="reqUpper">Pelo menos uma letra maiúscula</li>
+            <li id="reqLower">Pelo menos uma letra minúscula</li>
+            <li id="reqNumber">Pelo menos um número</li>
+            <li id="reqSpecial">Pelo menos um caractere especial (ex: @, #, $, etc.)</li>
+        </ul>
+    </div>
+
+
+
+
+    <script>
+        //sessão 1 nome// 
+        let nome = document.getElementById("nome")
+
+        nome.addEventListener("input", function(event){
+            let valor = event.target.value
+            valor = valor.replace(/\d/g, '')
+            event.target.value = valor
+        })
+
+
+        //sessão2 CPF//
+        let cpf = document.getElementById("cpf")
+        
+
+        cpf.addEventListener("input", function(e){
+            let valor = e.target.value
+
+            valor = valor.replace(/\D/g, "")
+            if (valor.length > 9) {
+                valor = valor.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4')
+            } 
+            else if (valor.length > 6) {
+                valor = valor.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3')
+            } 
+            else if (valor.length > 3) {
+                valor = valor.replace(/(\d{3})(\d{1,3})/, '$1.$2')
+            }
+            e.target.value = valor
+        }) 
+
+        // sessão 3 RG //
+
+        let rg = document.getElementById("rg")
+
+        rg.addEventListener("input", function(event){
+            let valor = event.target.value
+
+            valor = valor.replace(/\D/g, "");
+            valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+            valor = valor.replace(/(\d{3})\.(\d{3})(\d)/, "$1.$2.$3");
+            valor = valor.substring(0, 11);
+
+
+            event.target.value = valor
+        })
+
+        // sessão 4 CEP // 
+
+        let cep = document.getElementById("cep")
+
+        cep.addEventListener("input", function(e){
+            let valor = e.target.value
+
+            valor = valor.replace(/\D/g, "");
+            valor = valor.substring(0, 8)
+            valor = valor.replace(/(\d{5})(\d)/, "$1-$2")
+
+            e.target.value = valor
+        })
+
+        // sessão 5 UF //
+
+        let uf = document.getElementById("uf")
+
+        uf.addEventListener("input", function(e){
+            let regex = e.target.value
+
+            regex = regex.replace(/\d/g, "")
+            regex = regex.substring(0, 2)
+            regex = regex.toUpperCase()
+
+            e.target.value = regex
+        })
+
+        // sessão 6 SENHA //
+
+        let senha = document.getElementById("senha")
+        let mensagemSenha = document.getElementById("mensagemSenha")
+
+        let reqLength = document.getElementById("reqLength")
+        let reqUpper = document.getElementById("reqUpper")
+        let reqLower = document.getElementById("reqLower")
+        let reqNumber = document.getElementById("reqNumber")
+        let reqSpecial = document.getElementById("reqSpecial")
+
+        senha.addEventListener("input", function(e){
+            let valor = senha.value
+
+            mensagemSenha.innerHTML = "você digitou: " + valor.length + " Caracteres";
+            
+            //validar length//
+            if(valor.length >= 8){
+                reqLength.style.color = "green"
+            }
+            else{
+                reqLength.style.color = "red"
+            }
+
+            //validar Uppercase//
+            if(/[A-Z]/g.test(valor)){
+                reqUpper.style.color = "green"
+            }
+            else{
+                reqUpper.style.color = "red"
+            }
+
+            //validar Lowercase//
+            if(/[a-z]/.test(valor)){
+                reqLower.style.color = "green"
+            }
+            else(
+                reqLower.style.color = "red"
+            )
+
+            //validar Number//
+            if(/[0-9]/.test(valor)){
+                reqNumber.style.color = "green"
+            }
+            else{
+                reqNumber.style.color = "red"
+
+            }
+            
+            //validar especial//
+            if(/[^a-zA-Z0-9]/.test(valor)){
+                reqSpecial.style.color = "green"
+            }
+            else{
+                reqSpecial.style.color = "red"
+            }
+        })
+    </script>
+</body>
+</html>
