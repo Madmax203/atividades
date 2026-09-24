@@ -7,48 +7,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>1. nome</h2> 
-    <input type="text" id="nome">
-    
+    <div class="formCard">
+        <div>
+            <h2>1. nome</h2> 
+            <input type="text" id="nome">
+        </div>
+        
+        <br>
 
-    <br>
+        <div>
+            <h2>2. CPF</h2>
+            <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
+        </div>
 
-    <h2>2. CPF</h2>
-    <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
+        <br>
 
-    <br>
+        <h2>3. RG</h2>
+        <input type="text" id="rg" placeholder="000.000.000" maxlength="11">
 
-    <h2>3. RG</h2>
-    <input type="text" id="rg" placeholder="000.000.000" maxlength="11">
+        <br>
 
-    <br>
+        <h2>4. CEP</h2>
+        <input type="text" id="cep" placeholder="00000-000" >
 
-    <h2>4. CEP</h2>
-    <input type="text" id="cep" placeholder="00000-000" >
+        <br>
 
-    <br>
+        <h2>5. ENDEREÇO</h2>
+        <input type="text">
 
-    <h2>5. ENDEREÇO</h2>
-    <input type="text">
+        <h2>6. UF</h2>
+        <input type="text" id="uf" placeholder="ex: RN">
 
-    <h2>6. UF</h2>
-    <input type="text" id="uf" placeholder="ex: RN">
+        <br>
+        <div class="campo">
+            <h2>7. SENHA</h2>
+            <input type="password" id="senha" minlength="8">
+            <p id="mensagemSenha"></p>
 
-    <br>
-    <div class="campo">
-        <h2>7. SENHA</h2>
-        <input type="password" id="senha" minlength="8">
-        <p id="mensagemSenha"></p>
-
-        <ul class="requirements">
-            <li id="reqLength">Mínimo de 8 caracteres</li>
-            <li id="reqUpper">Pelo menos uma letra maiúscula</li>
-            <li id="reqLower">Pelo menos uma letra minúscula</li>
-            <li id="reqNumber">Pelo menos um número</li>
-            <li id="reqSpecial">Pelo menos um caractere especial (ex: @, #, $, etc.)</li>
-        </ul>
+            <ul class="requirements">
+                <li id="reqLength">Mínimo de 8 caracteres</li>
+                <li id="reqUpper">Pelo menos uma letra maiúscula</li>
+                <li id="reqLower">Pelo menos uma letra minúscula</li>
+                <li id="reqNumber">Pelo menos um número</li>
+                <li id="reqSpecial">Pelo menos um caractere especial (ex: @, #, $, etc.)</li>
+            </ul>
+        </div>
     </div>
-
 
 
 

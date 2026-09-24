@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="menu">
+        <ul class="interaction">
+            <li id="login">login</li>
+            <li id="cadastro">cadastro</li>
+        </ul>
+    </div>
+    
+
+     <!-- Modal -->
+    <div class="modalBackground hide">
+        <div class="modalCard">
+            
+            <div class="section">
+                <h1>Login</h1>
+            </div>
+            <div class="section">
+                <label for="email">Email</label>
+                <input type="text" id="email">
+            </div>
+            <div class="section">
+                <label for="senha">Senha</label>
+                <input type="text" id="senha">
+            </div>
+            <div class="section">
+                <button id="bntLogin">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let login = document.querySelector('#login')
+        let hide = document.querySelector('.hide')
+
+        function(e){
+            let valor = e.target.value
+            
+        }
+    </script>
+</body>
+
+</html>

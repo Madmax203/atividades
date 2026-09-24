@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+}
+.menu{
+    position: fixed;    
+    width: 100%;      
+    height: 50px;
+    background: rgb(228, 228, 228);
+    
+}
+
+.interaction{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    list-style: none;
+    padding-left: 0;
+    margin: 10px;
+}
+
+.interaction li{
+    background-color: rgb(211, 211, 211);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.interaction li:hover{
+    background-color:black;
+    color: white;
+}
+
+
+
+/* modal */
+
+.modalBackground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.modalCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    text-align: center;
+    background-color: rgb(226, 226, 226);
+    width: 400px;
+    height: 500px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px;
+    
+}
+
+button{
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(211, 211, 211);
+}
+button:hover{
+    background-color:black;
+    color: white;
+}
+
+input{
+    height: 30px;
+}
+.section{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.hide{
+    display: none;
+}
