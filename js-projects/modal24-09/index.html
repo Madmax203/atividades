@@ -37,7 +37,7 @@
             </div>
         </div>
     </div>
-
+    <!-- modal 2 -->
     <div class="modalBackground hide">
         <div class="modalCard">
             
@@ -45,15 +45,19 @@
                 <h1>Login</h1>
             </div>
             <div class="section">
-                <label for="email">Email</label>
-                <input type="text" id="email">
+                <label for="emailCadastro">Email</label>
+                <input type="text" id="emailCadastro">
             </div>
             <div class="section">
                 <label for="senha">Senha</label>
-                <input type="text" id="senha">
+                <input type="text" id="senhaCadastro">
             </div>
             <div class="section">
-                <button id="btnLogin">Enviar</button>
+                <label for="confirmSenhaCadastro">Confirmar Senha</label>
+                <input type="text" id="confirmSenhaCadastro">
+            </div>
+            <div class="section">
+                <button id="btnLoginCadastro">Enviar</button>
             </div>
         </div>
     </div>
@@ -64,6 +68,10 @@
         let btnLogin = document.querySelector('#btnLogin')
         let login = document.querySelector('#login')
         let hide = document.querySelector('.hide')
+
+        let emailCadastro = document.querySelector('#emailCadastro')
+        let senhaCadastro = document.querySelector('#senhaCadastro')
+        let confirmSenhaCadastro = document.querySelector('#confirmSenhaCadastro')
 
 
         function abrirModal(){
