@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        /* Container que cobre a tela inteira (Overlay) */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Classe que esconde o modal */
+.escondido {
+  display: none !important;
+}
+
+/* Caixa centralizada do conteúdo */
+.modal-conteudo {
+  background: rgb(96, 84, 146);
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(47, 12, 46, 0.3);
+}
+
+/* Botão de fechar (X) no canto superior direito */
+.btn-fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+}
+
+.btn-fechar:hover {
+  color: #000;
+}
+#btnConfirmar{
+  color: yellow;
+  background-color: #000;
+}
+#btnConfirmar:hover {
+  color: #000;
+  background-color: azure;
+}
+.textomodal{
+  color: azure;
+}
+#btnAbrirModal{
+  color:green;
+  background-color: rgb(225, 113, 132);
+}
+</style>
+</head>
+<body>
+    <!-- Botão que dispara o modal -->
+<button id="btnAbrirModal">Abrir Janela</button>
+
+<!-- Estrutura do Modal (inicia escondido) -->
+<div id="modalContainer" class="modal-container escondido">
+  <div class="modal-conteudo">
+    <span id="btnFecharModal" class="btn-fechar">&times;</span>
+    <h2 class="textomodal">Janela Modal</h2>
+    <p class="textomodal">Este é um modal criado inteiramente com HTML, CSS e Vanilla JS!</p>
+    <button id="btnConfirmar">Entendido</button>
+  </div>
+</div>
+<script>
+    // 1. Seleção dos elementos no DOM
+const btnAbrir = document.querySelector("#btnAbrirModal");
+const btnFechar = document.querySelector("#btnFecharModal");
+const btnConfirmar = document.querySelector("#btnConfirmar");
+const modalContainer = document.querySelector("#modalContainer");
+
+// 2. Funções para abrir e fechar o modal
+function abrirModal() {
+  modalContainer.classList.remove("escondido");
+}
+
+function fecharModal() {
+  modalContainer.classList.add("escondido");
+}
+
+// 3. Eventos de clique nos botões
+btnAbrir.addEventListener("click", abrirModal);
+btnFechar.addEventListener("click", fecharModal);
+btnConfirmar.addEventListener("click", fecharModal);
+
+// 4. Fechar ao clicar no fundo escuro (fora da caixa de conteúdo)
+modalContainer.addEventListener("click", (e) => {
+  // Verifica se o clique foi direto no container (overlay) e não nos filhos
+  if (e.target === modalContainer) {
+    fecharModal();
+  }
+});
+
+// 5. Fechar ao pressionar a tecla "Escape" (ESC)
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !modalContainer.classList.contains("escondido")) {
+    fecharModal();
+  }
+});
+</script>
+</body>
+</html>

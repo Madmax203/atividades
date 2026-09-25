@@ -17,7 +17,7 @@
     </div>
     
 
-     <!-- Modal -->
+     <!-- Modal 1 -->
     <div class="modalBackground hide">
         <div class="modalCard">
             
@@ -33,20 +33,56 @@
                 <input type="text" id="senha">
             </div>
             <div class="section">
-                <button id="bntLogin">Enviar</button>
+                <button id="btnLogin">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modalBackground hide">
+        <div class="modalCard">
+            
+            <div class="section">
+                <h1>Login</h1>
+            </div>
+            <div class="section">
+                <label for="email">Email</label>
+                <input type="text" id="email">
+            </div>
+            <div class="section">
+                <label for="senha">Senha</label>
+                <input type="text" id="senha">
+            </div>
+            <div class="section">
+                <button id="btnLogin">Enviar</button>
             </div>
         </div>
     </div>
 
 
     <script>
+        let modalBackground = document.querySelector('.modalBackground')
+        let btnLogin = document.querySelector('#btnLogin')
         let login = document.querySelector('#login')
         let hide = document.querySelector('.hide')
 
-        function(e){
-            let valor = e.target.value
+
+        function abrirModal(){
+            modalBackground.classList.remove('hide')
             
         }
+
+        function fecharModal(){
+            modalBackground.classList.add('hide')
+        }
+
+        login.addEventListener("click", abrirModal)
+        btnLogin.addEventListener("click", fecharModal)
+
+        modalBackground.addEventListener("click", function(e){
+            if(modalBackground === e.target){
+                fecharModal()
+            }
+        })
     </script>
 </body>
 
