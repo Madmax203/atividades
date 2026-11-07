@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de usuários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="card">
+      <h1>Cadastro</h1>
+      <p class="sub">Preencha seus dados para criar a conta.</p>
+
+      <form id="formCadastro" novalidate>
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" placeholder="Maria da Silva" autocomplete="name">
+          <span class="erro" id="erro-nome"></span>
+        </div>
+
+        <div class="linha">
+          <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" placeholder="(84) 90000-0000" inputmode="numeric">
+            <span class="erro" id="erro-telefone"></span>
+          </div>
+          <div class="campo">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" placeholder="000.000.000-00" inputmode="numeric">
+            <span class="erro" id="erro-cpf"></span>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" placeholder="00000-000" inputmode="numeric">
+          <span class="erro" id="erro-cep"></span>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="voce@exemplo.com" autocomplete="email">
+          <span class="erro" id="erro-email"></span>
+        </div>
+
+        <div class="campo">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="Mínimo 6 caracteres e 1 especial" autocomplete="new-password">
+          <span class="erro" id="erro-senha"></span>
+        </div>
+
+        <button type="submit" class="btn">Cadastrar</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Usuários cadastrados</h2>
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr><th>Nome</th><th>E-mail</th><th>Telefone</th><th>CPF</th><th>CEP</th></tr>
+          </thead>
+          <tbody id="listaUsuarios"></tbody>
+        </table>
+      </div>
+      <p id="vazio" class="vazio">Nenhum usuário cadastrado ainda.</p>
+    </section>
+  </main>
+
+  <!-- Modal (começa oculto) -->
+  <div id="modal" class="overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+    <div class="modal-caixa">
+      <button class="modal-x" id="btnX" aria-label="Fechar">&times;</button>
+      <h3 id="modalTitulo">Cadastro concluído</h3>
+      <p id="modalMsg"></p>
+      <ul id="modalResumo" class="resumo"></ul>
+      <button class="btn" id="btnEntendido">Entendido</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
